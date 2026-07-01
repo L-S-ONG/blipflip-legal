@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blipflip Terms of Service
+permalink: /terms/
 ---
 
 # Blipflip — Terms of Service

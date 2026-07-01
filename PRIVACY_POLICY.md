@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blipflip Privacy Policy
+permalink: /privacy/
 ---
 
 # Blipflip — Privacy Policy

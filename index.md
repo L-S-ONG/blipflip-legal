@@ -8,7 +8,7 @@ title: Blipflip
 A tiny video diary for your day — record a short clip every hour and share it with a
 private squad of friends or one partner.
 
-- [Privacy Policy](PRIVACY_POLICY.html)
-- [Terms of Service](TERMS_OF_SERVICE.html)
+- [Privacy Policy](/blipflip-legal/privacy/)
+- [Terms of Service](/blipflip-legal/terms/)
 
 Contact: **raynordev@gmail.com**
