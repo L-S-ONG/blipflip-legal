@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Join me on Blipflip 💛</title>
+<meta name="description" content="Tap to join my Blipflip squad — one tiny video every hour." />
+<style>
+  :root{--ink:#3B3265;--cream:#FFF6E0;--coral:#FF6B6B;--sunshine:#FFC93C;--night:#2C2655;--mint:#63D8A2}
+  *{box-sizing:border-box;margin:0}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{width:100%;max-width:380px;background:#fff;border:3px solid var(--ink);border-radius:26px;
+    box-shadow:0 7px 0 var(--ink);padding:30px 24px;text-align:center}
+  h1{font-size:1.55rem;line-height:1.2;margin-bottom:8px}
+  p{color:#7C749C;font-size:.95rem;line-height:1.5}
+  .code{margin:20px auto 6px;display:inline-block;background:var(--cream);border:3px solid var(--ink);border-radius:16px;
+    padding:10px 22px;font-size:2rem;font-weight:800;letter-spacing:.18em;font-variant-numeric:tabular-nums}
+  .code-label{font-size:.75rem;color:#7C749C;margin-bottom:18px}
+  a.btn{display:block;margin-top:12px;padding:14px 18px;border:3px solid var(--ink);border-radius:18px;
+    box-shadow:0 5px 0 var(--ink);font-weight:700;text-decoration:none;font-size:1.05rem}
+  a.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink)}
+  .open{background:var(--sunshine);color:var(--ink)}
+  .store{background:var(--coral);color:#fff}
+  .steps{margin-top:20px;text-align:left;font-size:.85rem;color:#7C749C}
+  .steps li{margin:.35em 0 .35em 1.2em}
+  .foot{margin-top:22px;font-size:.75rem;color:#B0A9CC}
+</style>
+</head>
+<body>
+  <main class="card">
+    <h1>Join me on Blipflip! 💛</h1>
+    <p>A tiny video diary — record a few seconds every hour and share your day, privately.</p>
+
+    <div class="code" id="code">······</div>
+    <div class="code-label">your magic invite code</div>
+
+    <a class="btn open" id="openBtn" href="#">Open in Blipflip</a>
+    <a class="btn store" id="storeBtn" href="https://play.google.com/store/apps/details?id=com.labratrayray.blipflip">Get it on Google Play</a>
+
+    <ol class="steps">
+      <li>Install Blipflip (button above) and sign up.</li>
+      <li>Come back here and tap <b>Open in Blipflip</b> — you'll join automatically.</li>
+      <li>Or type the magic code in <b>Squads &amp; Couples</b>.</li>
+    </ol>
+
+    <p class="foot">Private by design — no ads, no public feed.</p>
+  </main>
+
+<script>
+  // ?code=ABC123 → show it + build the deep link. The intent:// URL opens the
+  // app when installed and falls back to the Play listing when it isn't.
+  var code = (new URLSearchParams(location.search).get('code') || '').trim().toUpperCase();
+  var codeEl = document.getElementById('code');
+  var openBtn = document.getElementById('openBtn');
+  if (code) {
+    codeEl.textContent = code;
+    var fallback = encodeURIComponent('https://play.google.com/store/apps/details?id=com.labratrayray.blipflip');
+    var isAndroid = /android/i.test(navigator.userAgent);
+    openBtn.href = isAndroid
+      ? 'intent:///join/' + encodeURIComponent(code) +
+        '#Intent;scheme=blipflip;package=com.labratrayray.blipflip;S.browser_fallback_url=' + fallback + ';end'
+      : 'blipflip:///join/' + encodeURIComponent(code);
+  } else {
+    codeEl.textContent = '?';
+    openBtn.style.display = 'none';
+  }
+</script>
+</body>
+</html>
