@@ -10,5 +10,6 @@ private squad of friends or one partner.
 
 - [Privacy Policy](/blipflip-legal/privacy/)
 - [Terms of Service](/blipflip-legal/terms/)
+- [Support](/blipflip-legal/support/)
 
-Contact: **raynordev@gmail.com**
+Support: **[labratrayray@gmail.com](mailto:labratrayray@gmail.com)**
