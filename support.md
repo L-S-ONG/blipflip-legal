@@ -41,6 +41,11 @@ Use the same sign-in method you used when creating your account. If you cannot g
 
 To request deletion in the app, open **Profile → Delete account** and read the confirmation before proceeding. Save anything you want to keep first.
 
+Use the latest app version. When the app says deletion is pending, wait ten minutes
+and retry **Delete account**. This waiting period lets existing upload links expire;
+the request does not currently complete automatically in the background. If cleanup
+fails, retry or contact us. Older app versions must update to use this deletion flow.
+
 If you cannot access your account or need help with a data-deletion request, email [labratrayray@gmail.com](mailto:labratrayray@gmail.com?subject=Blipflip%20Account%20Deletion) with the subject **Blipflip Account Deletion**. We may need to verify account ownership before acting on the request. See the privacy policy for information about data handling.
 
 ## Policies
@@ -51,4 +56,4 @@ If you cannot access your account or need help with a data-deletion request, ema
 
 ---
 
-Last updated: 22 September 2026.
+Last updated: 29 October 2026.
