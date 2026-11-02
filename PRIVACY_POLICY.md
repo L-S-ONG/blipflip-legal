@@ -6,7 +6,7 @@ permalink: /privacy/
 
 # Blipflip — Privacy Policy
 
-**Last updated: 29 October 2026.**
+**Last updated 3 November 2026.**
 
 Blipflip ("the app", "we", "us") is a short‑video journaling app where you record
 brief hourly clips and optionally share them with a private "squad" of friends or
@@ -79,19 +79,20 @@ your recorded media or chat-message bodies to diagnostic reports.
 
 ## Where your data is stored and how it's protected
 
-The current cloud-sync implementation prefers **Cloudflare R2** and stores
-public media URLs for compatibility with older app versions. Updated clients
-request short-lived viewing links after an account and sharing-permission check,
-but the original public routes have not yet been disabled.
-**Anyone who obtains one of the original public URLs can view the media
-without signing in**, even if the clip is shown only to you or your invited group
-inside the app. These links are not short-lived signed viewing URLs. Do not treat
-uploaded clips as protected by the group's sign-in restrictions or as end-to-end
-encrypted. Supabase fallback clips use signed viewing URLs.
+Cloud sync uses private **Cloudflare R2** storage. Blipflip checks your account
+and sharing permissions before issuing viewing links. **R2 viewing links expire
+after 15 minutes.** Anyone holding a viewing link can use it until it expires.
+Removing someone from a group prevents them from obtaining new viewing links.
+Previously issued links remain usable until expiry, and copies already saved on
+another device may remain. Supabase fallback clips and recaps also use signed
+viewing links, with their own expiry periods.
 
-Database permissions and in-app sharing controls are separate from access to
-these media URLs. Cloud-service requests use HTTPS, but transport encryption does
-not prevent someone with a public media URL from accessing that file.
+Access through the former permanent public media URLs was disabled on
+**3 November 2026**. Older app versions that use those URLs need an update for
+cloud playback and uploads.
+
+Cloud-service requests use HTTPS. Uploaded media is readable by the services
+that store and process it to provide the app's features.
 
 Your **profile picture (avatar)** is kept in a **public** bucket so it loads quickly
 in feeds. This means anyone with the (unguessable) image URL can view it — please

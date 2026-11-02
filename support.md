@@ -29,6 +29,11 @@ Check that Blipflip has camera and microphone permission in your phone's setting
 
 ### A clip, shared moment, or recap will not load
 
+Install any available Blipflip updates, then close and reopen the app. Private
+cloud playback and uploads require an updated app. Access through old permanent
+media links was disabled on 3 November 2026. Use Blipflip's in-app squad or couple
+sharing to give other people access.
+
 Check your internet connection and try again. Sharing and recap rendering need an internet connection. If the issue continues, tell us which screen is affected and whether you see an error message.
 
 Do not uninstall the app or clear its storage as a troubleshooting step unless you have saved anything you want to keep elsewhere; some content may be stored only on your device.
@@ -56,4 +61,4 @@ If you cannot access your account or need help with a data-deletion request, ema
 
 ---
 
-Last updated: 29 October 2026.
+Last updated 3 November 2026.
